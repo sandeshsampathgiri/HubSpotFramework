@@ -1,87 +1,225 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="3" failed="0" ignored="0" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="115843" started-at="2019-05-09T04:18:45Z" finished-at="2019-05-09T04:20:40Z">
+  <suite name="Default suite" duration-ms="140" started-at="2019-05-09T16:02:37Z" finished-at="2019-05-09T16:02:37Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="115843" started-at="2019-05-09T04:18:45Z" finished-at="2019-05-09T04:20:40Z">
-      <class name="com.qa.hubspot.tests.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@4dfa3a9d]" name="setUp" is-config="true" duration-ms="14119" started-at="2019-05-09T04:18:45Z" finished-at="2019-05-09T04:18:59Z">
+    <test name="Default test" duration-ms="140" started-at="2019-05-09T16:02:37Z" finished-at="2019-05-09T16:02:37Z">
+      <class name="com.qa.hubspot.tests.ContactsPageTest">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="setUp" is-config="true" duration-ms="10" started-at="2019-05-09T16:02:37Z" finished-at="2019-05-09T16:02:37Z">
+          <exception class="java.lang.NoClassDefFoundError">
+            <message>
+              <![CDATA[com/qa/hubspot/base/BasePage]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoClassDefFoundError: com/qa/hubspot/base/BasePage
+at com.qa.hubspot.tests.ContactsPageTest.setUp(ContactsPageTest.java:30)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.ClassNotFoundException: com.qa.hubspot.base.BasePage
+at java.net.URLClassLoader.findClass(Unknown Source)
+at java.lang.ClassLoader.loadClass(Unknown Source)
+at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+at java.lang.ClassLoader.loadClass(Unknown Source)
+... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoClassDefFoundError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@4dfa3a9d]" name="verifyLoginPageTitleTest" duration-ms="33" started-at="2019-05-09T04:18:59Z" finished-at="2019-05-09T04:18:59Z">
+        <test-method status="SKIP" signature="createContact()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="createContact" duration-ms="0" started-at="2019-05-09T16:02:37Z" finished-at="2019-05-09T16:02:37Z">
+          <exception class="java.lang.NoClassDefFoundError">
+            <message>
+              <![CDATA[com/qa/hubspot/base/BasePage]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoClassDefFoundError: com/qa/hubspot/base/BasePage
+at com.qa.hubspot.tests.ContactsPageTest.setUp(ContactsPageTest.java:30)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.ClassNotFoundException: com.qa.hubspot.base.BasePage
+at java.net.URLClassLoader.findClass(Unknown Source)
+at java.lang.ClassLoader.loadClass(Unknown Source)
+at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+at java.lang.ClassLoader.loadClass(Unknown Source)
+... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoClassDefFoundError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginPageTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="828" started-at="2019-05-09T04:18:59Z" finished-at="2019-05-09T04:19:00Z">
+        </test-method> <!-- createContact -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-05-09T16:02:37Z" finished-at="2019-05-09T16:02:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@4dfa3a9d]" name="setUp" is-config="true" duration-ms="12121" started-at="2019-05-09T04:19:00Z" finished-at="2019-05-09T04:19:12Z">
+        <test-method status="SKIP" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="setUp" is-config="true" duration-ms="0" started-at="2019-05-09T16:02:37Z" finished-at="2019-05-09T16:02:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyLoginTest()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@4dfa3a9d]" name="verifyLoginTest" duration-ms="1856" started-at="2019-05-09T04:19:12Z" finished-at="2019-05-09T04:19:14Z">
+        <test-method status="SKIP" signature="verifyPageHeader()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="verifyPageHeader" duration-ms="0" started-at="2019-05-09T16:02:37Z" finished-at="2019-05-09T16:02:37Z">
+          <exception class="java.lang.NoClassDefFoundError">
+            <message>
+              <![CDATA[com/qa/hubspot/base/BasePage]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoClassDefFoundError: com/qa/hubspot/base/BasePage
+at com.qa.hubspot.tests.ContactsPageTest.setUp(ContactsPageTest.java:30)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.ClassNotFoundException: com.qa.hubspot.base.BasePage
+at java.net.URLClassLoader.findClass(Unknown Source)
+at java.lang.ClassLoader.loadClass(Unknown Source)
+at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+at java.lang.ClassLoader.loadClass(Unknown Source)
+... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoClassDefFoundError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="838" started-at="2019-05-09T04:19:14Z" finished-at="2019-05-09T04:19:14Z">
+        </test-method> <!-- verifyPageHeader -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-05-09T16:02:37Z" finished-at="2019-05-09T16:02:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@4dfa3a9d]" name="setUp" is-config="true" duration-ms="11953" started-at="2019-05-09T04:19:14Z" finished-at="2019-05-09T04:19:26Z">
+        <test-method status="SKIP" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="setUp" is-config="true" duration-ms="0" started-at="2019-05-09T16:02:37Z" finished-at="2019-05-09T16:02:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifySignUpLinkTest()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@4dfa3a9d]" name="verifySignUpLinkTest" duration-ms="127" started-at="2019-05-09T04:19:26Z" finished-at="2019-05-09T04:19:26Z">
+        <test-method status="SKIP" signature="verifyPageTitleTest()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="verifyPageTitleTest" duration-ms="0" started-at="2019-05-09T16:02:37Z" finished-at="2019-05-09T16:02:37Z">
+          <exception class="java.lang.NoClassDefFoundError">
+            <message>
+              <![CDATA[com/qa/hubspot/base/BasePage]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoClassDefFoundError: com/qa/hubspot/base/BasePage
+at com.qa.hubspot.tests.ContactsPageTest.setUp(ContactsPageTest.java:30)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.ClassNotFoundException: com.qa.hubspot.base.BasePage
+at java.net.URLClassLoader.findClass(Unknown Source)
+at java.lang.ClassLoader.loadClass(Unknown Source)
+at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+at java.lang.ClassLoader.loadClass(Unknown Source)
+... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoClassDefFoundError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySignUpLinkTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="803" started-at="2019-05-09T04:19:26Z" finished-at="2019-05-09T04:19:27Z">
+        </test-method> <!-- verifyPageTitleTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-05-09T16:02:37Z" finished-at="2019-05-09T16:02:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
-      <class name="com.qa.hubspot.tests.HomePageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@6eebc39e]" name="setUp" is-config="true" duration-ms="23069" started-at="2019-05-09T04:19:27Z" finished-at="2019-05-09T04:19:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyHomePageHeaderTest()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@6eebc39e]" name="verifyHomePageHeaderTest" duration-ms="321" started-at="2019-05-09T04:19:50Z" finished-at="2019-05-09T04:19:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyHomePageHeaderTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@6eebc39e]" name="tearDown" is-config="true" duration-ms="884" started-at="2019-05-09T04:19:51Z" finished-at="2019-05-09T04:19:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@6eebc39e]" name="setUp" is-config="true" duration-ms="23159" started-at="2019-05-09T04:19:52Z" finished-at="2019-05-09T04:20:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyHomePageTitle()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@6eebc39e]" name="verifyHomePageTitle" duration-ms="73" started-at="2019-05-09T04:20:15Z" finished-at="2019-05-09T04:20:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyHomePageTitle -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@6eebc39e]" name="tearDown" is-config="true" duration-ms="853" started-at="2019-05-09T04:20:15Z" finished-at="2019-05-09T04:20:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@6eebc39e]" name="setUp" is-config="true" duration-ms="23348" started-at="2019-05-09T04:20:16Z" finished-at="2019-05-09T04:20:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyLoggedInAccountNameTest()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@6eebc39e]" name="verifyLoggedInAccountNameTest" duration-ms="106" started-at="2019-05-09T04:20:39Z" finished-at="2019-05-09T04:20:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoggedInAccountNameTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@6eebc39e]" name="tearDown" is-config="true" duration-ms="1283" started-at="2019-05-09T04:20:39Z" finished-at="2019-05-09T04:20:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.hubspot.tests.HomePageTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.qa.hubspot.tests.ContactsPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

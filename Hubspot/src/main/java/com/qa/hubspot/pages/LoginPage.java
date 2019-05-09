@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import com.qa.hubspot.base.BasePage;
 import com.qa.hubspot.util.ElementActions;
 
-public class LoginPageUsingBy extends BasePage {
+public class LoginPage extends BasePage {
 	
 	WebDriver driver;
 	ElementActions elementactions;
@@ -19,7 +19,7 @@ public class LoginPageUsingBy extends BasePage {
 	By loginBtn = By.id("loginBtn");
 	By signUpLink = By.linkText("Sign up");
 	
-	public LoginPageUsingBy(WebDriver driver)
+	public LoginPage(WebDriver driver)
 	{
 		this.driver = driver;
 		elementactions = new ElementActions(driver);
@@ -37,18 +37,14 @@ public class LoginPageUsingBy extends BasePage {
 			return elementactions.getElement(signUpLink).isDisplayed();
 		}
 
-		public  HomePageUsingBy doLogin(String un, String pwd)
+		public  HomePage doLogin(String un, String pwd)
 		{
-			//username.sendKeys(un);
-			//password.sendKeys(pwd);
-			//loginButton.click();
-			//return new HomePageUsingPageFactory(driver);
 			
-			elementactions.getElement(username).sendKeys(un);
+			//elementactions.getElement(username).sendKeys(un);
 			elementactions.sendKeysElement(username, un);
 			elementactions.sendKeysElement(password, pwd);
 			elementactions.clickOnElement(loginBtn);
-			return new HomePageUsingBy(driver);
+			return new HomePage(driver);
 		}
 
 }
