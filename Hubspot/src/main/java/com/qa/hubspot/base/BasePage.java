@@ -74,8 +74,7 @@ public class BasePage {
 
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(
-					"E:\\API_Automation_Workspace\\Hubspot\\src\\main\\java\\com\\qa\\hubspot\\configuration\\config.properties");
+			FileInputStream ip = new FileInputStream("C:\\Users\\Lenovo\\git\\HubSpotFramework\\Hubspot\\src\\main\\java\\com\\qa\\hubspot\\configuration\\config.properties");
 
 			prop.load(ip);
 		} catch (IOException e) {

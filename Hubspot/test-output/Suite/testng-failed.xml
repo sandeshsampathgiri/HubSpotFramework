@@ -7,9 +7,20 @@
         <methods>
           <include name="verifyLoggedInAccountNameTest"/>
           <include name="tearDown"/>
+          <include name="verifyHomePageTitle"/>
+          <include name="verifyHomePageHeaderTest"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.qa.hubspot.tests.HomePageTest -->
+      <class name="com.qa.hubspot.tests.LoginPageTest">
+        <methods>
+          <include name="verifyLoginPageTitleTest"/>
+          <include name="setUp"/>
+          <include name="verifyLoginTest"/>
+          <include name="verifySignUpLinkTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
