@@ -15,6 +15,7 @@ import com.qa.hubspot.pages.ContactsPage;
 import com.qa.hubspot.pages.HomePage;
 import com.qa.hubspot.pages.LoginPage;
 import com.qa.hubspot.util.CommonUtil;
+import com.qa.hubspot.util.ExcelUtil;
 
 public class ContactsPageTest {
 
@@ -45,25 +46,24 @@ public class ContactsPageTest {
 		String contactsPageTitle = driver.getTitle();
 		Assert.assertEquals(contactsPageTitle, Constants.CONTACTSPAGE_TITLE);
 	}
-	
+
 	@Test
-	public void verifyPageHeader()
-	{
+	public void verifyPageHeader() {
 		String contactPageHeader = contactsPage.getHomePageHeaderValue();
-		Assert.assertEquals(contactPageHeader,Constants.CONTACTSPAGE_HEADER);
+		Assert.assertEquals(contactPageHeader, Constants.CONTACTSPAGE_HEADER);
 	}
-	
-	@Test
-	public void createContact()
-	{
-		contactsPage.createContact("test@test.com", "Firstname", "Lastname", "QA");
-		
+
+	@Test(dataProvider = "getContactsData")
+	public void createContact(String emailAddress, String fname, String lname, String job_title) {
+
+		contactsPage.createContact(emailAddress, fname, lname, job_title);
 	}
-	
-	@DataProvider(name="dataforcontactcreation")
-	public void getDataForContactCreation()
-	{
-		
+
+	@DataProvider(name = "getContactsData")
+	public Object[][] getDataForContactCreation() {
+
+		Object[][] contactsData = ExcelUtil.getTestData("contacts");
+		return contactsData;
 	}
 
 	@AfterMethod
