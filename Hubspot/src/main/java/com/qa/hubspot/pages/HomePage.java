@@ -41,4 +41,10 @@ public class HomePage extends BasePage {
 		elementactions.clickOnElement(contactsSubMenu);
 		return new ContactsPage(driver);
 	}
+	
+	public void testMethod()
+	{
+		
+	}
 }
+
