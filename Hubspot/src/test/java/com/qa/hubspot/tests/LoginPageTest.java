@@ -17,7 +17,7 @@ public class LoginPageTest {
 	BasePage basePage;
 	WebDriver driver;
 	Properties prop;
-	//LoginPageUsingPageFactory loginPage;
+	// LoginPageUsingPageFactory loginPage;
 	LoginPage loginPage;
 
 	@BeforeMethod
@@ -27,9 +27,9 @@ public class LoginPageTest {
 		driver = basePage.initialize_driver(prop);
 		driver.get(prop.getProperty("url"));
 		CommonUtil.mediumWait();
-		//loginPage = new LoginPageUsingPageFactory(driver);
+		// loginPage = new LoginPageUsingPageFactory(driver);
 		loginPage = new LoginPage(driver);
-		
+		CommonUtil.mediumWait();
 
 	}
 

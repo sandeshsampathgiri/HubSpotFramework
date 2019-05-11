@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -56,9 +57,9 @@ public class BasePage {
 			driver.manage().deleteAllCookies();
 		} 
 		
-		else if (browserName.equalsIgnoreCase("Internet Explorer")) {
-			System.setProperty("webdriver.ie.driver", "E:\\chromedriver_win32\\chromedriver.exe");
-			InternetExplorerOptions options = new InternetExplorerOptions();
+		else if (browserName.equalsIgnoreCase("Edge")) {
+			System.setProperty("webdriver.edge.driver", "E:\\chromedriver_win32\\MicrosoftWebDriver.exe");
+			//InternetExplorerOptions options = new InternetExplorerOptions();
 			/*
 			 * options.a options.addArguments("--incognito");
 			 * options.addArguments("--disable-notifications");
@@ -67,7 +68,7 @@ public class BasePage {
 			 * options.setAcceptInsecureCerts(true);
 			 * 
 			 */
-			driver = new InternetExplorerDriver();
+			driver = new EdgeDriver();
 			driver.manage().timeouts().implicitlyWait(Constants.PAGE_LOAD_TIME_OUT, TimeUnit.SECONDS);
 			driver.manage().deleteAllCookies();
 		} else {
