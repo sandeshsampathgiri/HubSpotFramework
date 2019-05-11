@@ -35,16 +35,10 @@ public class HomePage extends BasePage {
 		return elementactions.getElement(accountName).getText();
 	}
 
-	public ContactsPage navigateToContactsPage()
-	{
+	public ContactsPage navigateToContactsPage() {
 		elementactions.clickOnElement(contactsMainMenu);
 		elementactions.clickOnElement(contactsSubMenu);
 		return new ContactsPage(driver);
 	}
-	
-	public void testMethod()
-	{
-		
-	}
-}
 
+}
