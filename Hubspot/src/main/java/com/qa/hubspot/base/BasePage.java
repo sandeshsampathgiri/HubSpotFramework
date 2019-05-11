@@ -72,7 +72,7 @@ public class BasePage {
 			driver.manage().timeouts().implicitlyWait(Constants.PAGE_LOAD_TIME_OUT, TimeUnit.SECONDS);
 			driver.manage().deleteAllCookies();
 		} else {
-			System.out.println("No browser is defined ");
+			System.out.println("No browser is defined");
 		}
 		return driver;
 
