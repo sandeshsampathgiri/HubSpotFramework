@@ -2,12 +2,12 @@
 <testng-results skipped="1" failed="0" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="91847" started-at="2019-05-11T02:27:15Z" finished-at="2019-05-11T02:28:47Z">
+  <suite name="Suite" duration-ms="90955" started-at="2019-05-11T03:12:38Z" finished-at="2019-05-11T03:14:09Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="91847" started-at="2019-05-11T02:27:15Z" finished-at="2019-05-11T02:28:47Z">
+    <test name="Test" duration-ms="90955" started-at="2019-05-11T03:12:38Z" finished-at="2019-05-11T03:14:09Z">
       <class name="com.qa.hubspot.tests.ContactsPageTest">
-        <test-method status="SKIP" signature="createContact(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="createContact" duration-ms="0" started-at="2019-05-11T02:27:15Z" data-provider="getContactsData" finished-at="2019-05-11T02:27:15Z">
+        <test-method status="SKIP" signature="createContact(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="createContact" duration-ms="0" started-at="2019-05-11T03:12:38Z" data-provider="getContactsData" finished-at="2019-05-11T03:12:38Z">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[java.lang.NullPointerException]]>
@@ -38,7 +38,7 @@ at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 Caused by: java.lang.NullPointerException
-at com.qa.hubspot.util.ExcelUtil.getTestData(ExcelUtil.java:33)
+at com.qa.hubspot.util.ExcelUtil.getTestData(ExcelUtil.java:36)
 at com.qa.hubspot.tests.ContactsPageTest.getDataForContactCreation(ContactsPageTest.java:65)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -54,27 +54,27 @@ at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(Met
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContact -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="setUp" is-config="true" duration-ms="43996" started-at="2019-05-11T02:27:15Z" finished-at="2019-05-11T02:27:59Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="setUp" is-config="true" duration-ms="44732" started-at="2019-05-11T03:12:38Z" finished-at="2019-05-11T03:13:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyPageHeader()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="verifyPageHeader" duration-ms="180" started-at="2019-05-11T02:27:59Z" finished-at="2019-05-11T02:27:59Z">
+        <test-method status="PASS" signature="verifyPageHeader()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="verifyPageHeader" duration-ms="204" started-at="2019-05-11T03:13:23Z" finished-at="2019-05-11T03:13:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPageHeader -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="tearDown" is-config="true" duration-ms="859" started-at="2019-05-11T02:27:59Z" finished-at="2019-05-11T02:28:00Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="tearDown" is-config="true" duration-ms="1087" started-at="2019-05-11T03:13:23Z" finished-at="2019-05-11T03:13:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="setUp" is-config="true" duration-ms="45782" started-at="2019-05-11T02:28:00Z" finished-at="2019-05-11T02:28:46Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="setUp" is-config="true" duration-ms="43881" started-at="2019-05-11T03:13:24Z" finished-at="2019-05-11T03:14:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyPageTitleTest()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="verifyPageTitleTest" duration-ms="17" started-at="2019-05-11T02:28:46Z" finished-at="2019-05-11T02:28:46Z">
+        <test-method status="PASS" signature="verifyPageTitleTest()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="verifyPageTitleTest" duration-ms="26" started-at="2019-05-11T03:14:08Z" finished-at="2019-05-11T03:14:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPageTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="tearDown" is-config="true" duration-ms="899" started-at="2019-05-11T02:28:46Z" finished-at="2019-05-11T02:28:47Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@6eebc39e]" name="tearDown" is-config="true" duration-ms="917" started-at="2019-05-11T03:14:08Z" finished-at="2019-05-11T03:14:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

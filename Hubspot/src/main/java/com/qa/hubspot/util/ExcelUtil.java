@@ -11,11 +11,14 @@ public class ExcelUtil {
 
 	public static Workbook wb;
 	public static Sheet sh;
-	public static String TESTDATA_SHEET_PATH = "C:\\Users\\Lenovo\\git\\HubSpotFramework\\Hubspot\\src\\main\\java\\com\\qa\\hubspot\\testdata\\TestData.xlsx";
+	
+	
+	public static String TESTDATA_SHEET_PATH = "\\Users\\Lenovo\\git\\HubSpotFramework\\Hubspot\\src\\main\\java\\com\\qa\\hubspot\\testdata\\TestData.xlsx";
 
 	public static Object[][] getTestData(String sheetName) {
 
 		FileInputStream fis = null;
+		
 		try {
 			fis = new FileInputStream(TESTDATA_SHEET_PATH);
 

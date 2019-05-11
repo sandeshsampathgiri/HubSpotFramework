@@ -21,11 +21,13 @@ public class BasePage {
 	Properties prop;
 
 	public WebDriver initialize_driver(Properties prop) {
-
+		
 		String browserName = prop.getProperty("browser");
 
-		if (browserName.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "E:\\chromedriver_win32\\chromedriver.exe");
+		if (browserName.equalsIgnoreCase("chrome"))
+		{
+			String path = System.getProperty("user.dir");
+			System.setProperty("webdriver.chrome.driver", path + "//exeFiles//chromedriver.exe");
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--incognito");
 			options.addArguments("--disable-notifications");
@@ -39,7 +41,10 @@ public class BasePage {
 		}
 
 		else if (browserName.equalsIgnoreCase("Firefox")) {
-			System.setProperty("webdriver.gecko.driver", "E:\\chromedriver_win32\\chromedriver.exe");
+			
+			String path = System.getProperty("user.dir");
+			System.setProperty("webdriver.gecko.driver", path + "//exeFiles//geckodriver.exe");
+			
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--incognito");
 			options.addArguments("--disable-notifications");
@@ -49,7 +54,9 @@ public class BasePage {
 			driver = new FirefoxDriver(options);
 			driver.manage().timeouts().implicitlyWait(Constants.PAGE_LOAD_TIME_OUT, TimeUnit.SECONDS);
 			driver.manage().deleteAllCookies();
-		} else if (browserName.equalsIgnoreCase("Internet Explorer")) {
+		} 
+		
+		else if (browserName.equalsIgnoreCase("Internet Explorer")) {
 			System.setProperty("webdriver.ie.driver", "E:\\chromedriver_win32\\chromedriver.exe");
 			InternetExplorerOptions options = new InternetExplorerOptions();
 			/*
