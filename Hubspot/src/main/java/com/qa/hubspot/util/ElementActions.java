@@ -46,5 +46,12 @@ public class ElementActions extends BasePage {
 	public String getTitle() {
 		return driver.getTitle();
 	}
+	
+	
+	public int getContactsCount(By selector)
+	{
+		int count = driver.findElements(selector).size();
+		return count;
+	}
 
 }

@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import com.qa.hubspot.base.BasePage;
 import com.qa.hubspot.commons.Constants;
+import com.qa.hubspot.pages.AboutContactPage;
 import com.qa.hubspot.pages.ContactsPage;
 import com.qa.hubspot.pages.HomePage;
 import com.qa.hubspot.pages.LoginPage;
@@ -25,6 +26,7 @@ public class ContactsPageTest {
 	LoginPage loginPage;
 	HomePage homePage;
 	ContactsPage contactsPage;
+	AboutContactPage abtContactPage;
 
 	@BeforeMethod
 	public void setUp() {
@@ -39,15 +41,16 @@ public class ContactsPageTest {
 		CommonUtil.mediumWait();
 		contactsPage = homePage.navigateToContactsPage();
 		CommonUtil.mediumWait();
+		//abtContactPage = new AboutContactPage(driver);
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyPageTitleTest() {
 		String contactsPageTitle = driver.getTitle();
 		Assert.assertEquals(contactsPageTitle, Constants.CONTACTSPAGE_TITLE);
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyPageHeader() {
 		String contactPageHeader = contactsPage.getHomePageHeaderValue();
 		Assert.assertEquals(contactPageHeader, Constants.CONTACTSPAGE_HEADER);
@@ -57,6 +60,7 @@ public class ContactsPageTest {
 	public void createContact(String emailAddress, String fname, String lname, String job_title) {
 
 		contactsPage.createContact(emailAddress, fname, lname, job_title);
+		
 	}
 
 	@DataProvider(name = "getContactsData")
