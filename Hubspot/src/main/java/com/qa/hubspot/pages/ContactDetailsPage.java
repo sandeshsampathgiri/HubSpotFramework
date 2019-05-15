@@ -6,31 +6,31 @@ import org.openqa.selenium.WebDriver;
 import com.qa.hubspot.base.BasePage;
 import com.qa.hubspot.util.ElementActions;
 
-public class AboutContactPage extends BasePage {
+public class ContactDetailsPage extends BasePage{
 
 	WebDriver driver;
 	ElementActions elementactions;
-	AboutContactPage abtContactPage;
-
+	
 	By contactsMainMenu = By.xpath("//a[@id='nav-primary-contacts-branch']");
 	By contactsSubMenu = By.xpath("//div[@aria-label='Contacts']//a[contains(text(),'Contacts')]");
 
-	public AboutContactPage(WebDriver driver) {
+	public ContactDetailsPage(WebDriver driver) {
 		this.driver = driver;
 		elementactions = new ElementActions(driver);
-		abtContactPage = new AboutContactPage(driver);
 	}
-
-	public String getAboutContactPageTitle() {
+	
+	public String getContactsDetailsPageTitle() {
 		return driver.getTitle();
 	}
-
+	
 	public ContactsPage navigateToContactsPage() {
-
-		System.out.println("Driver= " + driver);
 		elementactions.clickOnElement(contactsMainMenu);
 		elementactions.clickOnElement(contactsSubMenu);
 		return new ContactsPage(driver);
 	}
+	
+	
+	
 
+	
 }

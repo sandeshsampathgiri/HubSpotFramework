@@ -14,11 +14,12 @@ public class ContactsPage extends BasePage {
 
 	WebDriver driver;
 	ElementActions elementactions;
-	AboutContactPage abtContactPage;
+	ContactDetailsPage contactDetailsPage;
 
 	public ContactsPage(WebDriver driver) {
 		this.driver = driver;
 		elementactions = new ElementActions(driver);
+
 	}
 
 	By contactsCount = By.xpath("//td[@class='checkbox-cell p-x-3 column-hs__multi_checkbox']");
@@ -29,7 +30,8 @@ public class ContactsPage extends BasePage {
 	By lastName = By.xpath("//div[@class='private-form__input-wrapper']/input[@id='uid-ctrl-3']");
 	By jobTitle = By.xpath("//div[@class='private-form__input-wrapper']/input[@id='uid-ctrl-5']");
 	By createContactSecondaryBtn = By.xpath("//button[@data-confirm-button='accept']");
-	
+	By contactsMainMenu = By.xpath("//a[@id='nav-primary-contacts-branch']");
+	By contactsSubMenu = By.xpath("//div[@aria-label='Contacts']//a[contains(text(),'Contacts')]");
 
 	public String getHomePageTitle() {
 		return driver.getTitle();
@@ -44,7 +46,7 @@ public class ContactsPage extends BasePage {
 	public void createContact(String emailAddress, String fname, String lname, String job_title) {
 
 		int initial_contactCount = elementactions.getContactsCount(contactsCount);
-
+		
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.elementToBeClickable(createContactPrimaryBtn));
 		elementactions.clickOnElement(createContactPrimaryBtn);
@@ -66,15 +68,15 @@ public class ContactsPage extends BasePage {
 
 		CommonUtil.mediumWait();
 
-		abtContactPage.navigateToContactsPage();
+		contactDetailsPage = new ContactDetailsPage(driver);
+
+		contactDetailsPage.navigateToContactsPage();
 		
 		CommonUtil.mediumWait();
-		
-		wait.until(ExpectedConditions.elementToBeClickable(contactsCount));
 
 		int updated_contactCount = elementactions.getContactsCount(contactsCount);
 
-		Assert.assertEquals(updated_contactCount - initial_contactCount, 1);
+		Assert.assertEquals((updated_contactCount-initial_contactCount), 1);
 
 	}
 

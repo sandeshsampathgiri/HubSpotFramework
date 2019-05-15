@@ -1,18 +1,19 @@
 package com.qa.hubspot.base;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.ie.InternetExplorerOptions;
 
 import com.qa.hubspot.commons.Constants;
 
@@ -56,22 +57,7 @@ public class BasePage {
 			driver.manage().timeouts().implicitlyWait(Constants.PAGE_LOAD_TIME_OUT, TimeUnit.SECONDS);
 			driver.manage().deleteAllCookies();
 		} 
-		
-		else if (browserName.equalsIgnoreCase("Edge")) {
-			System.setProperty("webdriver.edge.driver", "E:\\chromedriver_win32\\MicrosoftWebDriver.exe");
-			//InternetExplorerOptions options = new InternetExplorerOptions();
-			/*
-			 * options.a options.addArguments("--incognito");
-			 * options.addArguments("--disable-notifications");
-			 * options.addArguments("--disable-infobars");
-			 * options.addArguments("start-maximized");
-			 * options.setAcceptInsecureCerts(true);
-			 * 
-			 */
-			driver = new EdgeDriver();
-			driver.manage().timeouts().implicitlyWait(Constants.PAGE_LOAD_TIME_OUT, TimeUnit.SECONDS);
-			driver.manage().deleteAllCookies();
-		} else {
+		   else {
 			System.out.println("No browser is defined");
 		}
 		return driver;
@@ -82,6 +68,8 @@ public class BasePage {
 
 		try {
 			prop = new Properties();
+			String configPath = System.getProperty("user.dir");
+			
 			FileInputStream ip = new FileInputStream("C:\\Users\\Lenovo\\git\\HubSpotFramework\\Hubspot\\src\\main\\java\\com\\qa\\hubspot\\configuration\\config.properties");
 
 			prop.load(ip);
@@ -92,4 +80,6 @@ public class BasePage {
 
 		return prop;
 	}
+	
+	
 }
