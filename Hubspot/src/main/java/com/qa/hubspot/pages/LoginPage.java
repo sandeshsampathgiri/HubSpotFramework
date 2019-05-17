@@ -40,7 +40,6 @@ public class LoginPage extends BasePage {
 		public  HomePage doLogin(String un, String pwd)
 		{
 			
-			//elementactions.getElement(username).sendKeys(un);
 			elementactions.sendKeysElement(username, un);
 			elementactions.sendKeysElement(password, pwd);
 			elementactions.clickOnElement(loginBtn);

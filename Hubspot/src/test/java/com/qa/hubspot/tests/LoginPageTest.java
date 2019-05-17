@@ -2,6 +2,7 @@ package com.qa.hubspot.tests;
 
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -19,13 +20,16 @@ public class LoginPageTest {
 	Properties prop;
 	// LoginPageUsingPageFactory loginPage;
 	LoginPage loginPage;
+	Logger log;
 
 	@BeforeMethod
 	public void setUp() {
 		basePage = new BasePage();
+		log = Logger.getLogger(BasePage.class);
 		prop = basePage.initialize_properties();
 		driver = basePage.initialize_driver(prop);
 		driver.get(prop.getProperty("url"));
+		log.info("----Opened Hubspot application---");
 		CommonUtil.mediumWait();
 		// loginPage = new LoginPageUsingPageFactory(driver);
 		loginPage = new LoginPage(driver);
@@ -37,6 +41,7 @@ public class LoginPageTest {
 	public void verifyLoginPageTitleTest() {
 
 		String loginPageTitle = loginPage.getLoginPageTitle();
+		log.info("Fetching title of login page");
 		System.out.println("Login page title is: " + loginPageTitle);
 		Assert.assertEquals(loginPageTitle, Constants.LOGINPAGE_TITLE, "Login page title is incorrect");
 	}
@@ -44,17 +49,20 @@ public class LoginPageTest {
 	@Test
 	public void verifySignUpLinkTest() {
 		Assert.assertTrue(loginPage.verifySignUpLink(), "Signup Link is not displayed");
+		log.info("Verifying if signup link is displayed on the login page");
 	}
 
 	@Test
 	public void verifyLoginTest() {
 		loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+		log.info("Logging into Hubspot application");
 
 	}
 
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();
+		log.info("Closing "+prop.getProperty("browser")+" browser");
 	}
 
 }
