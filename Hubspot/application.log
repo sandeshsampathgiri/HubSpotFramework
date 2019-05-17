@@ -1,0 +1,12 @@
+2019-05-17 06:45:00,039  INFO [main] BasePage:45 ----Starting Google Chrome browser---
+2019-05-17 06:45:00,990  INFO [main] BasePage:32 -----Opened Hubspot application---
+2019-05-17 06:45:17,038  INFO [main] BasePage:44 -Fetching title of login page
+2019-05-17 06:45:17,907  INFO [main] BasePage:65 -Closing chrome browser
+2019-05-17 06:45:21,614  INFO [main] BasePage:45 ----Starting Google Chrome browser---
+2019-05-17 06:45:22,147  INFO [main] BasePage:32 -----Opened Hubspot application---
+2019-05-17 06:45:39,425  INFO [main] BasePage:58 -Logging into Hubspot application
+2019-05-17 06:45:40,301  INFO [main] BasePage:65 -Closing chrome browser
+2019-05-17 06:45:44,024  INFO [main] BasePage:45 ----Starting Google Chrome browser---
+2019-05-17 06:45:44,688  INFO [main] BasePage:32 -----Opened Hubspot application---
+2019-05-17 06:46:00,804  INFO [main] BasePage:52 -Verifying if signup link is displayed on the login page
+2019-05-17 06:46:01,710  INFO [main] BasePage:65 -Closing chrome browser
