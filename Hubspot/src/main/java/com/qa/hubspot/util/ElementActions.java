@@ -1,5 +1,8 @@
 package com.qa.hubspot.util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -46,12 +49,15 @@ public class ElementActions extends BasePage {
 	public String getTitle() {
 		return driver.getTitle();
 	}
-	
-	
-	public int getContactsCount(By selector)
-	{
+
+	public int getContactsCount(By selector) {
 		int count = driver.findElements(selector).size();
 		return count;
 	}
 
+	public List<WebElement> getEmailAddressList(By selector) {
+		List<WebElement> emailAddressList = driver.findElements(selector);
+		return emailAddressList;
+
+	}
 }

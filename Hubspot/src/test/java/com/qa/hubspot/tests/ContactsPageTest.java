@@ -2,6 +2,7 @@ package com.qa.hubspot.tests;
 
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -25,6 +26,7 @@ public class ContactsPageTest {
 	LoginPage loginPage;
 	HomePage homePage;
 	ContactsPage contactsPage;
+	Logger log;
 	
 	
 	@BeforeMethod
@@ -32,6 +34,7 @@ public class ContactsPageTest {
 		basePage = new BasePage();
 		prop = basePage.initialize_properties();
 		driver = basePage.initialize_driver(prop);
+		
 		driver.get(prop.getProperty("url"));
 		CommonUtil.mediumWait();
 		loginPage = new LoginPage(driver);
@@ -45,21 +48,28 @@ public class ContactsPageTest {
 
 	@Test
 	public void verifyPageTitleTest() {
+		log = Logger.getLogger(ContactsPageTest.class);
 		String contactsPageTitle = driver.getTitle();
+		log.info("---------Executing verify contact page title test case");
 		Assert.assertEquals(contactsPageTitle, Constants.CONTACTSPAGE_TITLE);
 	}
 
 	@Test
 	public void verifyPageHeader() {
+		log = Logger.getLogger(ContactsPageTest.class);
 		String contactPageHeader = contactsPage.getHomePageHeaderValue();
+		log.info("---------Executing verify contact page header test case");
 		Assert.assertEquals(contactPageHeader, Constants.CONTACTSPAGE_HEADER);
 	}
 
 	@Test(dataProvider = "getContactsData")
 	public void createContact(String emailAddress, String fname, String lname, String job_title) {
 
-		contactsPage.createContact(emailAddress, fname, lname, job_title);
-		//contactsPage.
+		
+		//Commented out on purpose
+		//contactsPage.createContact(emailAddress, fname, lname, job_title);
+		contactsPage.createContact_newapproach(emailAddress, fname, lname, job_title);
+		
 		
 	}
 
